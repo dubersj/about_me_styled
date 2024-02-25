@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Steve Duber</title>
+    <link rel="stylesheet" href="styles.css" id="csslink"/>
+</head>
+
+<body>
+
+    <div class="headerCont">
+        <h1>About Me</h1>
+        <h2>Steve J. Duber</h2>
+    </div>
+
+    <div class="gridBox">
+        <div class="imgBoardCont">
+            <div class="imgCont">
+                <img src="dne.jpg"/>
+            </div>
+            <div class="imgCont">
+                <img src="dne.jpg"/>
+            </div>
+            <div class="imgCont">
+                <img src="dne.jpg"/>
+            </div>
+            <div class="imgCont">
+                <img src="dne.jpg"/>
+            </div>
+        </div>
+
+        <div class="introCont">
+            <h3>Main Body</h3><br/>
+            <p>
+                This is where I'm going to put some information
+                about myself, as this is a portfolio and all.
+            </p>
+        </div>
+    </div>
+
+    <div class="aniBox">
+        <p>Thanks for visiting!</p>
+    </div>
+
+    <footer>
+        <p>Made for Project 3, Web Programming I 2024 <strong>----</strong>
+            <a href="https://github.com/dubersj">
+                github.com/dubersj
+            </a>
+        </p>
+        <br/><hr/><br/>
+        <a href="https://dubersj.github.io/about_me_styled">
+            dubersj.github.io/about_me_styled
+        </a>
+    </footer>
+
+    <div class="gridBox">
+    <button id="bonus">CSS On</button>
+    <button id="bonus2">CSS Off</button>
+    </div>
+
+    <script>
+        function toggleCSS(value) { 
+            var csslink = document.getElementsByTagName('link'); 
+            csslink[0].href = value; 
+        }
+
+        bonus = document.getElementById("bonus");
+        bonus2 = document.getElementById("bonus2");
+        bonus.addEventListener("click", function (){
+            toggleCSS("styles.css");
+        });
+        bonus2.addEventListener("click", function() {
+            toggleCSS("404.css");
+        });
+    </script>
+
+</body>
+
+</html>
