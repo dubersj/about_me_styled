@@ -22,10 +22,10 @@
                 <img src="images/img1.jpg"/>
             </div>
             <div class="imgCont">
-                <img src="images/img1.jpg"/>
+                <img src="images/img2.jpg"/>
             </div>
             <div class="imgCont">
-                <img src="images/img1.jpg"/>
+                <img src="images/img3.jpg"/>
             </div>
             <div class="imgCont">
                 <img src="images/img1.jpg"/>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="introCont">
-            <h3>Main Body</h3><br/>
+            <h3>Introduction</h3><br/>
             <p>
                 Hello, welcome to my about me webpage with CSS!
                 I am a senior Computer Science student at Kent State 
@@ -94,13 +94,30 @@
             csslink[0].href = value; 
         }
 
+        function toggleImagesOff() {
+            var imgtags = document.getElementsByTagName('img');
+            for (let i=0; i<6; i++) {
+                imgtags[i].src = "404.jpg";
+                imgtags[i].alt = "Image too big to be displayed without CSS."
+            }
+        }
+
+        function toggleImagesOn() {
+            var imgtags2 = document.getElementsByTagName('img');
+            for (let i=0; i<6; i++) {
+                imgtags2[i].src = "images/img" + (i+1) + ".jpg";
+            }
+        }
+
         bonus = document.getElementById("bonus");
         bonus2 = document.getElementById("bonus2");
         bonus.addEventListener("click", function (){
             toggleCSS("styles.css");
+            toggleImagesOn();
         });
         bonus2.addEventListener("click", function() {
             toggleCSS("404.css");
+            toggleImagesOff();
         });
     </script>
 
